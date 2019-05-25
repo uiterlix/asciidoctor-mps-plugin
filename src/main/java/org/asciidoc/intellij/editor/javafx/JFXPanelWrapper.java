@@ -42,15 +42,15 @@ public class JFXPanelWrapper extends JFXPanel {
       // If scene is null then it will be set later and super.setEmbeddedScene(..) will init its scale properly,
       // otherwise explicitly set scene scale to match JFXPanel.scaleFactor.
       if (scene != null) {
-        try {
-          // this will no longer work with JDK 11
-          TKScene tks = scene.impl_getPeer();
-          if (tks instanceof EmbeddedSceneInterface) {
-            ((EmbeddedSceneInterface)tks).setPixelScaleFactor(scale);
-          }
-        } catch (NoSuchMethodError e) {
-          // ignore
-        }
+//        try {
+//           this will no longer work with JDK 11
+//          TKScene tks = scene.impl_getPeer();
+//          if (tks instanceof EmbeddedSceneInterface) {
+//            ((EmbeddedSceneInterface)tks).setPixelScaleFactor(scale);
+//          }
+//        } catch (NoSuchMethodError e) {
+//           ignore
+//        }
       }
     }
   }
