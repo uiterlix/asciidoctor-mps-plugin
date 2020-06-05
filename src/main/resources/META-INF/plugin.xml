@@ -1,7 +1,7 @@
 <idea-plugin url="https://intellij-asciidoc-plugin.ahus1.de/">
   <id>org.asciidoctor.intellij.asciidoc</id>
   <name>AsciiDoc</name>
-  <version>0.0.1</version>
+  <version>0.31.2</version>
   <vendor email="alexander.schwartz@gmx.net" url="https://github.com/asciidoctor/asciidoctor-intellij-plugin">
     Asciidoctor IntelliJ Plugin Project
   </vendor>
@@ -12,7 +12,7 @@
 
   <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
        on how to target different products -->
-  <idea-version since-build="202.4357.23"/> <!-- 2020.2 EAP -->
+  <idea-version since-build="193.1497"/> <!-- MPS 2019.3.4 -->
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html -->
   <depends>com.intellij.modules.lang</depends>
   <depends optional="true" config-file="java-features.xml">com.intellij.modules.java</depends>
@@ -128,7 +128,9 @@
       </action>
       <separator/>
       <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <!--
       <add-to-group group-id="RefactoringMenu" anchor="last"/>
+      -->
     </group>
 
     <group id="AsciiDocInline" class="org.asciidoc.intellij.actions.asciidoc.AsciiDocActionGroup">
@@ -138,7 +140,9 @@
               description="Inline selected include file">
       </action>
       <separator/>
+      <!--
       <add-to-group group-id="RefactoringMenu" anchor="last"/>
+      -->
     </group>
 
     <group id="AsciiDocExtract" class="org.asciidoc.intellij.actions.asciidoc.AsciiDocActionGroup">
